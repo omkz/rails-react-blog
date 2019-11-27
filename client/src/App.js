@@ -1,12 +1,27 @@
 import React from 'react';
-import './App.css';
-import AllPosts from "./components/AllPosts"; 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import AllPosts from "./components/AllPosts";
+import About from './components/About';
+import Contact from './components/Contact';
+
 
 function App() {
   return (
-    <div className="App">
-      <AllPosts />
-    </div>
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to={'/'} className="nav-link"> Home </Link></li>
+          <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
+          <li><Link to={'/about'} className="nav-link">About</Link></li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path='/' component={AllPosts} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/about' component={About} />
+      </Switch>
+
+    </Router>
   );
 }
 
