@@ -50,4 +50,4 @@ Before you get started, the following needs to be installed:
   foreman start -f Procfile.dev
   ```
 
-![railsblog! Screenshot](https://raw.githubusercontent.com/omkz/coolpics/master/public/screenshot.png)
+![railsblog! Screenshot](https://raw.githubusercontent.com/omkz/rails-react-blog/master/public/screenshot.png)
