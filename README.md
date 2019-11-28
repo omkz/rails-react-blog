@@ -15,7 +15,6 @@ Before you get started, the following needs to be installed:
   * **Bundler**: `gem install bundler`
   * [**Git**](http://help.github.com/git-installation-redirect)
   * **A database**. Only PostgreSQL 9.5 has been tested, so we give no guarantees that other databases (e.g. MySQL) work. If you're using OS X and have Homebrew installed, install it with `brew install postgresql`
-  * [**Redis**](http://redis.io). Version 3.2.6 has been used successfully, but newer versions should work as well. If you're using OS X and have Homebrew installed, install it with `brew install redis`
   
 ### Setting up the development environment
 
@@ -44,7 +43,7 @@ Before you get started, the following needs to be installed:
   yarn --cwd client install
   ```
 
-4. Start the development server:
+5. Start the development server:
 
   ```bash
   foreman start -f Procfile.dev
