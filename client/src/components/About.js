@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Container } from "semantic-ui-react";
 
 class About extends Component {
   render() {
     return (
-        <div>
-          <h2>About</h2>
-        </div>
+      <Container text style={{ marginTop: "7em" }}>
+        <h2>About</h2>
+      </Container>
     );
   }
 }

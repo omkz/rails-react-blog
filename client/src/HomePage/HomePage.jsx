@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from "react";
 import { Container } from "semantic-ui-react";
+import AllPosts from "../components/AllPosts";
 
-class Contact extends Component {
+class HomePage extends React.Component {
   render() {
     return (
       <Container text style={{ marginTop: "7em" }}>
-        <h2>Contact</h2>
+        <AllPosts />
       </Container>
     );
   }
 }
 
-export default Contact;
+export { HomePage };

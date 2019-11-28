@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import AllPosts from "./components/AllPosts";
 import About from './components/About';
 import Contact from './components/Contact';
 import { Menu, Container} from 'semantic-ui-react'
+import { HomePage } from './HomePage';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       </Menu>
       
       <Switch>
-        <Route exact path='/' component={AllPosts} />
+        <Route exact path='/' component={HomePage} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
       </Switch>
