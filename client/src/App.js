@@ -4,6 +4,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import { Menu, Container} from 'semantic-ui-react'
 import { HomePage } from './HomePage';
+import CreatePost from './components/CreatePost';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <Router>
       <Menu fixed='top' inverted>
         <Container>
-          <Menu.Item as={Link} to="/" > Home</Menu.Item>
+          <Menu.Item icon="home" as={Link} to="/" icon="home"> Home</Menu.Item>
+          <Menu.Item as={Link} to="/createpost">Create Post</Menu.Item>
           <Menu.Item as={Link} to="/contact"> Contact</Menu.Item>
           <Menu.Item as={Link} to="/about"> About</Menu.Item>
         </Container>
@@ -19,6 +21,7 @@ function App() {
       
       <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route path='/createpost' component={CreatePost} />
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
       </Switch>
