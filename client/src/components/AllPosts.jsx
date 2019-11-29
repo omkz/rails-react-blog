@@ -4,16 +4,8 @@ import {
   Button,
   Container,
   Divider,
-  Grid,
   Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility
+  Segment
 } from "semantic-ui-react";
 
 class AllPosts extends React.Component {

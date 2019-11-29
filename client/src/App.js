@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/About';
 import Contact from './components/Contact';
-import { Menu, Input } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { HomePage } from './HomePage';
 import CreatePost from './components/CreatePost';
 import { LoginPage } from './LoginPage';
