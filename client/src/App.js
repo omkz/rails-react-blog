@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Menu fixed='top' inverted>
         <Container>
-          <Menu.Item icon="home" as={Link} to="/" icon="home"> Home</Menu.Item>
+          <Menu.Item as={Link} to="/" icon="home"> Home</Menu.Item>
           <Menu.Item as={Link} to="/createpost">Create Post</Menu.Item>
           <Menu.Item as={Link} to="/contact"> Contact</Menu.Item>
           <Menu.Item as={Link} to="/about"> About</Menu.Item>
