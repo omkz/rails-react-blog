@@ -16,11 +16,9 @@ class EditPost extends React.Component {
       description: "",
       content: ""
     };
-    
   }
 
   componentDidMount() {
-    console.log("redit posdst")
     axios
       .get("/api/v1/posts/" + this.props.match.params.id)
       .then(response => {
@@ -63,7 +61,7 @@ class EditPost extends React.Component {
       })
       .then(res => {
         const { from } =
-          { from: { pathname: "/posts/" + res.data.id } } ||
+          { from: { pathname: "/posts/" + res.data.id + "/detail" } } ||
           this.props.history.push("/");
         this.props.history.push(from);
         toast.success("Post successfully updated");
@@ -92,7 +90,7 @@ class EditPost extends React.Component {
               />
               <Form.TextArea
                 label="Content"
-                style={{ minHeight: 150 }} 
+                style={{ minHeight: 150 }}
                 value={this.state.content}
                 onChange={this.onChangeContent}
               />
