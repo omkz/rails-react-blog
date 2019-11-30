@@ -45,11 +45,10 @@ class CreatePost extends React.Component {
         content: this.state.content
       })
       .then(res => {
-        console.log(res);
         toast.success("Post successfully created");
+        this.props.history.push("/");
       })
       .catch(function(error) {
-        console.log(error);
         toast.error(JSON.stringify(error.response.data));
       });
 
