@@ -31,7 +31,7 @@ class AllPosts extends React.Component {
                   {post.title}
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>{post.description}</p>
-                <Link to={"/posts/" + post.id} className="ui button">Read More..</Link>
+                <Link to={"/posts/" + post.id + "/detail"} className="ui button">Read More..</Link>
                 <Divider
                   as="h4"
                   className="header"

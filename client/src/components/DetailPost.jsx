@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Container, Header, Segment } from "semantic-ui-react";
+import {Link} from 'react-router-dom';
 
 class DetailPost extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class DetailPost extends React.Component {
             {this.state.title}
           </Header>
           <p style={{ fontSize: "1.33em" }}>{this.state.content}</p>
+          <Link to={"/posts/" + this.props.match.params.id + "/edit/"} className="ui button">Edit</Link>
         </Container>
       </Segment>
     );

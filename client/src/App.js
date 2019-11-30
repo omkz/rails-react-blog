@@ -7,6 +7,7 @@ import { HomePage } from './HomePage';
 import CreatePost from './components/CreatePost';
 import { LoginPage } from './LoginPage';
 import DetailPost from './components/DetailPost'
+import EditPost from './components/EditPost';
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         <Route exact path='/' component={HomePage} />
         <Route path='/createpost' component={CreatePost} />
         <Route path='/login' component={LoginPage} />
-        <Route path='/posts/:id' component={DetailPost}/>
+        <Route path='/posts/:id/detail' component={DetailPost}/>
+        <Route path='/posts/:id/edit' component={EditPost}/>
       </Switch>
 
     </Router>
