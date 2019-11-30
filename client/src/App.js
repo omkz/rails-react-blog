@@ -6,6 +6,7 @@ import { Menu } from 'semantic-ui-react'
 import { HomePage } from './HomePage';
 import CreatePost from './components/CreatePost';
 import { LoginPage } from './LoginPage';
+import DetailPost from './components/DetailPost'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/' component={HomePage} />
         <Route path='/createpost' component={CreatePost} />
         <Route path='/login' component={LoginPage} />
+        <Route path='/posts/:id' component={DetailPost}/>
       </Switch>
 
     </Router>

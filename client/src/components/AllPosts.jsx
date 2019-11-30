@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
 import {
-  Button,
   Container,
   Divider,
   Header,
   Segment
 } from "semantic-ui-react";
+import {Link} from 'react-router-dom';
 
 class AllPosts extends React.Component {
   constructor(props) {
@@ -30,10 +30,8 @@ class AllPosts extends React.Component {
                 <Header as="h3" style={{ fontSize: "2em" }}>
                   {post.title}
                 </Header>
-                <p style={{ fontSize: "1.33em" }}>{post.content}</p>
-                <Button as="a" size="large">
-                  Read More
-                </Button>
+                <p style={{ fontSize: "1.33em" }}>{post.description}</p>
+                <Link to={"/posts/" + post.id} className="ui button">Read More..</Link>
                 <Divider
                   as="h4"
                   className="header"
