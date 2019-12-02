@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Grid, Container } from "semantic-ui-react";
+import { Button, Form, Grid, Container, Segment } from "semantic-ui-react";
 import { toast } from "react-toastify";
 import axios from "axios";
 
@@ -61,10 +61,12 @@ class CreatePost extends React.Component {
 
   render() {
     return (
+
       <Container style={{ marginTop: "7em" }}>
         <Grid style={{ height: "100vh" }}>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Form onSubmit={this.onSubmit}>
+            <Segment stacked>
               <Form.Input
                 fluid
                 label="Title"
@@ -82,6 +84,7 @@ class CreatePost extends React.Component {
                 onChange={this.onChangeContent}
               />
               <Button type="submit">Submit</Button>
+              </Segment>
             </Form>
           </Grid.Column>
         </Grid>
