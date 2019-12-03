@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { Button, Form, Grid, Container } from "semantic-ui-react";
+import { Button, Form, Grid, Container, Segment } from "semantic-ui-react";
 
 class EditPost extends React.Component {
   constructor(props) {
@@ -77,24 +77,26 @@ class EditPost extends React.Component {
         <Grid style={{ height: "100vh" }}>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Form onSubmit={this.onSubmit}>
-              <Form.Input
-                fluid
-                label="Title"
-                value={this.state.title}
-                onChange={this.onChangeTitle}
-              />
-              <Form.TextArea
-                label="Description"
-                value={this.state.description}
-                onChange={this.onChangeDescription}
-              />
-              <Form.TextArea
-                label="Content"
-                style={{ minHeight: 150 }}
-                value={this.state.content}
-                onChange={this.onChangeContent}
-              />
-              <Button type="submit">Submit</Button>
+              <Segment stacked>
+                <Form.Input
+                  fluid
+                  label="Title"
+                  value={this.state.title}
+                  onChange={this.onChangeTitle}
+                />
+                <Form.TextArea
+                  label="Description"
+                  value={this.state.description}
+                  onChange={this.onChangeDescription}
+                />
+                <Form.TextArea
+                  label="Content"
+                  style={{ minHeight: 150 }}
+                  value={this.state.content}
+                  onChange={this.onChangeContent}
+                />
+                <Button type="submit">Submit</Button>
+              </Segment>
             </Form>
           </Grid.Column>
         </Grid>
